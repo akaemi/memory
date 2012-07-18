@@ -1,0 +1,52 @@
+// Place all the styles related to the Games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html { 
+  background-color: #F0E0FF;
+}
+
+#memory {
+  text-align: center;
+  width: 840px;
+}
+
+#board {
+  float : left; 
+  width: 340px; 
+  height: 300px;
+  margin: 0px auto;
+}
+
+#cards { 
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+}
+
+#cards li { 
+  border: 1px solid black;
+  margin: 3px; 
+  float: left; 
+  width: 75px; 
+  height: 75px; 
+  font-size: 4em; 
+  text-align: center; 
+  background-image: url("/assets/card-back.png"); 
+}
+
+#matches {
+  float: left; 
+  width: 500px; 
+  height: 300px;
+  margin: 0px auto;
+}
+
+.match {
+  float: left; 
+  width: 150px; 
+  border:1px solid black; 
+  margin: 2px; 
+  background-color: white; 
+  text-align: center; 
+  padding: 3px;
+}

@@ -1,0 +1,49 @@
+<html>
+<head>
+	<%= javascript_include_tag 'jquery-1.7.2.min.js', 'memory.js'%>
+
+	<script type="text/javascript">
+	var pics = <%=@pictures.to_json.html_safe%>;
+	function flipCard(element) {
+		games.setPics(pics);
+		games.flipCard(element);
+	}	
+	</script>
+</head>
+
+<body>
+
+<div id="memory">
+	<h1>Test Your Memory</h1>
+	<div id="board">
+		<p><b>Match the projects!</b></p>
+		
+		<ol id="cards">
+			<%i=0%>
+			<% @pictures.length.times do%>
+				<li onclick="flipCard(this)" id="<%=i%>" selected="false" matched="false"></li>
+			<%i += 1%>
+			<%end%>
+		</ol>
+		
+	</div>
+
+
+	<div id="matches">
+		<p align="center"><b>Your Matches</b></p>
+		<div>
+			<b>Guesses: </b><span id="guessCounter">0</span>
+			<b>Matches: </b><span id="matchCounter">0</span>
+			<br/>
+			<br/>
+		</div>
+		
+	</div>
+</div>
+
+<div style="width:840px;text-align: center;">
+	<button onclick="window.location.reload()">Replay Game</button>
+</div>
+
+</body>
+</html>
